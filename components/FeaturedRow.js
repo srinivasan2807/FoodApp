@@ -45,18 +45,16 @@ class FeaturedRow extends PureComponent {
           {this.state.data.map((data) => (
             <RestaurantCard
               key={data._id}
-              restData={{
-                id: data._id,
-                imgUrl: data.image,
-                address: data.address,
-                title: data.name,
-                dishes: data.dishes,
-                rating: data.ratings,
-                desc: data.short_desc,
-                genre: data.type?.name,
-                lat: data.lat,
-                long: data.long,
-              }}
+              id= {data._id}
+              imgUrl= {data.image}
+              address= {data.address}
+              title= {data.name}
+              dishes= {data.dishes}
+              rating= {data.ratings}
+              desc= {data.short_desc}
+              genre= {data.type?.name}
+              lat= {data.lat}
+              long= {data.long}
             />
           ))}
         </ScrollView>
