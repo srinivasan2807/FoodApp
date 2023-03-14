@@ -1,19 +1,3 @@
-<<<<<<< Updated upstream
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { TailwindProvider } from "tailwindcss-react-native";
-import HomeScreen from "./screens/HomeScreen";
-
-
-
-export default function App() {
-  const Stack = createNativeStackNavigator();
-  return (
-    <TailwindProvider>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home">{HomeScreen}</Stack.Screen>
-=======
 import {
   NavigationContainer
 } from "@react-navigation/native";
@@ -37,7 +21,6 @@ export default function App() {
               headerShown: false,
             }}
           ></Stack.Screen>
->>>>>>> Stashed changes
         </Stack.Navigator>
       </NavigationContainer>
     </TailwindProvider>
