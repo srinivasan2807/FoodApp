@@ -1,27 +1,21 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSelector, createSlice } from "@reduxjs/toolkit";
 const initialState = {
-  restaurant: {
-    id: null,
-    imgUrl: null,
-    address: null,
-    title: null,
-    dishes: null,
-    rating: null,
-    desc: null,
-    genre: null
-  },
+   data:{}
 };
 export const restaurantSlice = createSlice({
   name: "restaurant",
   initialState,
   reducers: {
     setRestaurant: (state, action) => {
-      state.restaurant = action.payload;
+      state.data = action.payload;
     },
   },
 });
 
 // Action creators are generated for each case reducer function
 export const { setRestaurant } = restaurantSlice.actions;
-export const selectRestaurant = state => state.restaurant;
+export const selectRestaurant = createSelector(
+  (state) => state,
+  (data) => data
+);
 export default restaurantSlice.reducer;

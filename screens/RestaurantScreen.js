@@ -6,7 +6,7 @@ import {
   ArrowLeftIcon,
   MapPinIcon,
   QuestionMarkCircleIcon,
-  StarIcon
+  StarIcon,
 } from "react-native-heroicons/solid";
 import { useDispatch } from "react-redux";
 import BasketIcon from "../components/BasketIcon";
@@ -40,7 +40,9 @@ const RestaurantScreen = () => {
         dishes,
         rating,
         desc,
-        genre
+        genre,
+        lat,
+        long,
       })
     );
   }, [dispatch]);
